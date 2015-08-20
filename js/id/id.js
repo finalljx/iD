@@ -76,10 +76,13 @@ window.iD = function () {
             d3.json(localePath, function(err, result) {
                 window.locale[locale] = result;
                 window.locale.current(locale);
-                cb();
+                //cb();
             });
+            setTimeout(function(){
+                 cb();
+            },100)
         } else {
-            cb();
+            //cb();
         }
     };
 
